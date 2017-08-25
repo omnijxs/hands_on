@@ -9,7 +9,7 @@ class LibraryTest {
     void testLibraryInit() {
         Library library = new Library(label: 'Numibia')
 
-        assert library.label == 'numibia'
+        assert library.label == 'Numibia'
 
     }
 }
