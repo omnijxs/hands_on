@@ -14,7 +14,7 @@ class ApiTest {
 
 
     @Test
-    void testApiMethod_1() {
+    void testApiMethodReturnsDifferentParametersJoined () {
 
         String response = api.apiMethod('foo', 'bar', 'baz')
 
@@ -22,7 +22,7 @@ class ApiTest {
     }
 
     @Test
-    void testApiMethod_2() {
+    void testApiMethodReturnsOnlyDifferentParametersJoined() {
 
         String response = api.apiMethod('foo', 'foo', 'bar')
 
@@ -30,7 +30,7 @@ class ApiTest {
     }
 
     @Test
-    void testApiMethod_3() {
+    void testApiMethodReturnOnlyOneParameterWhenGivenParametersAreSame() {
 
         String response = api.apiMethod('foo', 'foo', 'foo')
 
