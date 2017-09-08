@@ -31,4 +31,13 @@ class ApiTest {
 
         assert response == 'foo'
     }
+
+    @Test
+    void testApiMethod_4() {
+        Api api = new Api()
+
+        String response = api.apiMethod(null, 'foo', 'foo')
+
+        assert response == 'No empty values allowed'
+    }
 }
