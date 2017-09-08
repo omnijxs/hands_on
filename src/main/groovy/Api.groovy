@@ -21,4 +21,8 @@ class Api {
         return answer
 
     }
+
+    public String apiMethodReturnReverse(String a, String b, String c, boolean reverse) {
+        return reverse ? apiMethod(c, b, a) : apiMethod(a, b, c)
+    }
 }

@@ -36,4 +36,29 @@ class ApiTest {
 
         assert response == 'foo'
     }
+
+    @Test
+    void testApiMethodReturnReverseReturnOriginalApiMethodResultWhenFalse(){
+
+        String response = api.apiMethodReturnReverse('foo', 'bar', 'baz', false)
+        assert response == 'foobarbaz'
+    }
+
+    @Test
+    void testApiMethodReturnReverseReturnsReversedApiMethodResultWhenTrue(){
+        String response = api.apiMethodReturnReverse('foo', 'bar', 'baz', true)
+        assert response == 'bazbarfoo'
+    }
+
+    @Test
+    void testApiMethodReturnReverseReturnsTwoStringsReversedApiMethodResultWhenTrue(){
+        String response = api.apiMethodReturnReverse('nakki', 'seilaa', 'seilaa', true)
+        assert response == 'seilaanakki'
+    }
+
+    @Test
+    void testApiMethodReturnReverseReturnsOneStringReversedApiMethodResultWhenTrue(){
+        String response = api.apiMethodReturnReverse('nakki', 'nakki', 'nakki', true)
+        assert response == 'nakki'
+    }
 }
